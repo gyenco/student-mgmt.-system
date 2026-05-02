@@ -9,7 +9,7 @@
 <body>
     <h1>Welcome to the Student Management System</h1>
     <div class="nav">
-        <button class="btn">
+        <button class="btn" onclick="window.location.href='{{ url_for('view_students') }}'">
             View Students
         </button>
         <button class="btn" onclick="window.location.href='{{ url_for('add_student') }}'">
