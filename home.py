@@ -39,5 +39,24 @@ def view_students():
     students = Student.query.all()
     return render_template("view_students.html", students = students)
 
+@app.route('/update_student/<int:id>', methods=['GET', 'POST'])
+def update_student(id):
+    student = Student.query.get_or_404(id)
+    if request.method == 'POST':
+        student.name = request.form['name']
+        student.age = request.form['age']
+        student.grade = request.form['grade']
+
+        db.session.commit()
+        return redirect(url_for('view_students'))
+    return render_template('update.html', student=student) 
+
+@app.route('/delete_student/<int:id>')
+def delete_student(id):
+    student = Student.query.get_or_404(id)
+    db.session.delete(student)
+    db.session.commit()
+    return redirect(url_for('view_students'))
+
 if __name__ == '__main__':
     app.run(debug=True)
