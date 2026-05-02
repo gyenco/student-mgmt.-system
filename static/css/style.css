@@ -1,0 +1,42 @@
+.btn {
+    width: 200px;
+    height: 50px;
+    font-size: 25px; 
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ h1{
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    background-color: rgb(229, 50, 0);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+}
+
+.add_btn{
+    background-color: rgb(255, 100, 57);
+    size: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100px;
+}
